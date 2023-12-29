@@ -28,6 +28,8 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault()
 
+    if (value.trim().length == 0) return
+
     setTaskList(prev => [...prev, { id: uuidv4(), value }])
     setValue('')
   }
